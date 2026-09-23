@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controladoria EJ</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icone.png">
+<meta name="apple-mobile-web-app-title" content="Controladoria EJ">
+<meta name="theme-color" content="#0a0f1c">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px;
+         background: radial-gradient(circle at 30% 20%, #16213d, #070b14 70%); color: #e7ebf2;
+         font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .card { width: 100%; max-width: 380px; text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+  .logo { width: 210px; max-width: 70%; height: auto; }
+  h1 { font-size: 18px; margin: 6px 0 0; font-weight: 600; }
+  p { margin: 0; color: #aeb8cc; font-size: 14px; line-height: 1.5; }
+  a.btn { display: inline-block; background: #2446c7; color: #fff; text-decoration: none; padding: 11px 20px; border-radius: 10px; font-weight: 600; }
+  a.btn:hover { background: #1c39a8; }
+  .spin { width: 22px; height: 22px; border-radius: 50%; border: 3px solid rgba(255,255,255,.15); border-top-color: #6d8cff; animation: s .8s linear infinite; }
+  @keyframes s { to { transform: rotate(360deg); } }
+  .hidden { display: none; }
+  ol { text-align: left; color: #c9d1e3; font-size: 14px; line-height: 1.6; padding-left: 20px; margin: 0; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <img class="logo" alt="Empresa Júnior PUC-Rio" src="data:image/png;base64,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">
+    <h1>Controladoria EJ</h1>
+
+    <!-- =====================================================================
+         ÚNICA LINHA PARA EDITAR: cole entre as aspas a URL do site (termina em /exec).
+         ===================================================================== -->
+    <a id="destino" class="btn" href="COLE_AQUI_A_URL_DO_SITE_QUE_TERMINA_EM_/exec">Abrir o sistema</a>
+
+    <div id="indo"><div class="spin" style="margin:0 auto 8px"></div><p>Abrindo o sistema…</p></div>
+
+    <div id="instalar" class="hidden">
+      <p>Para colocar o sistema na tela inicial do celular com o ícone da EJ:</p>
+      <ol>
+        <li><b>iPhone (Safari):</b> toque em Compartilhar e depois em "Adicionar à Tela de Início".</li>
+        <li><b>Android (Chrome):</b> toque em ⋮ e depois em "Adicionar à tela inicial".</li>
+      </ol>
+      <p>Depois, é só tocar no ícone para abrir.</p>
+    </div>
+
+    <noscript><p>Toque em "Abrir o sistema".</p></noscript>
+  </main>
+<script>
+  (function () {
+    var link = document.getElementById('destino');
+    var url = link.getAttribute('href') || '';
+    var configurado = /^https:\/\/script\.google\.com\//.test(url);
+    // Com "?instalar" no fim do endereço, a página NÃO redireciona: serve para adicionar à tela inicial.
+    var modoInstalar = /[?&]instalar\b/.test(location.search);
+    if (!configurado) {
+      document.getElementById('indo').innerHTML = '<p>Link ainda não configurado.</p>';
+      link.classList.add('hidden');
+      return;
+    }
+    if (modoInstalar) {
+      document.getElementById('indo').classList.add('hidden');
+      document.getElementById('instalar').classList.remove('hidden');
+      // o atalho criado a partir desta tela abre a versão que redireciona
+      history.replaceState(null, '', location.pathname);
+      return;
+    }
+    location.replace(url);
+  })();
+</script>
+</body>
+</html>
